@@ -1,1 +1,11 @@
-<h1>Messages coming soon!</h1>
+<h1>Messages</h1>
+
+<% @posts.each do |post| %>
+	<div>
+		<h2><%= post.title %></h2>
+		<p><%= post.body %></p>
+		<i>-<%= post.author %></i>
+	</div>
+	<hr />
+<% end %>
+
