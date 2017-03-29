@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#use simple-form gem for form input
+gem 'simple_form'
+
 #add rails_12factor for heroku awesomeness
 gem 'rails_12factor', group: :production
 
