@@ -27,15 +27,20 @@
         	<%= link_to 'Home', root_path %>
         </li>
         <li><a href="#">Members</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
       	<li>
 				  <%= link_to new_post_path do %>
 				    <i class="glyphicon glyphicon-plus-sign"></i>
 				    New Post
 				  <% end %>
 			  </li>
-        <li><a href="#">Sign In</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+	      <% if user_signed_in? %>
+	        <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+	      <% else %>
+	        <li><%= link_to "Log in", new_user_session_path %></li>
+      		<li><%= link_to 'Sign up', new_user_registration_path %></li>
+      	<% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
