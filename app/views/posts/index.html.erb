@@ -7,7 +7,9 @@
 	<div class= "booyah-box col-xs-10 col-xs-offset-1">
 		<h3><%= post.title %></h3>
 		<p><%= post.body %></p>
-		<i>-<%= post.author %></i>
+		<% if post.user.present? %>
+			<i>-<%= post.user.email %></i>
+		<% end %>
 	</div>
 <% end %>
 
