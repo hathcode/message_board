@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#use capybara for feature tests
+gem 'capybara'
+
 #use devise for user auth
 gem 'devise'
 
@@ -48,6 +51,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # use Rspec for tests
+  gem 'rspec-rails', '~> 3.5'
+  # use factory_girl for test dummy data
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
