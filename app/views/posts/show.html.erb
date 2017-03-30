@@ -7,14 +7,14 @@
 </button>
 <h1><%= @post.title %></h1>
 	<% if @post.user.present? %>
-		<i>-<%= @post.user.email %></i>
+		<i>-<%= @post.user.first_name %></i>
 	<% end %>
 	<br/><br/>
 	<p><%= @post.body %></p><br/>
 	<hr/>
 	<% @post.comments.each do |comment| %>
 		<p><%= comment.body %><p>
-		<i>-<%= comment.user.email %></i>
+		<i>-<%= comment.user.first_name %></i>
 		<hr/>
 	<% end %>
 </div>
