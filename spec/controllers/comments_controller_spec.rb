@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe CommentsController, type: :controller do
+	before(:each) do
+		request.env["HTTP_REFERER"] = "where_i_came_from"
+	end
   describe "comments#create action" do
     it "should allow users to create comments on grams" do
       p = FactoryGirl.create(:post)
@@ -9,7 +12,7 @@ RSpec.describe CommentsController, type: :controller do
 
       post :create, post_id: p.id, comment: {body: 'awesome post'}
 
-      expect(response).to redirect_to root_path
+      expect(response).to redirect_to "where_i_came_from"
       expect(p.comments.length).to eq 1
       expect(p.comments.first.body).to eq "awesome post"
     end

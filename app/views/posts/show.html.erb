@@ -7,20 +7,20 @@
 </button>
 <h1><%= @post.title %></h1>
 	<% if @post.user.present? %>
-		<i>-<%= @post.user.first_name %></i>
+		<i>Author: <%= @post.user.first_name %> <%= @post.user.last_name %></i>
 	<% end %>
 	<br/><br/>
 	<p><%= @post.body %></p><br/>
 	<hr/>
 	<% @post.comments.each do |comment| %>
 		<p><%= comment.body %><p>
-		<i>-<%= comment.user.first_name %></i>
+		<i>Author: <%= comment.user.first_name %> <%= comment.user.last_name %></i>
 		<hr/>
 	<% end %>
 </div>
 <div class="clear"></div>
 <!-- Button trigger modal -->
-<button class="btn btn-primary btn-md col-xs-offset-10" data-toggle="modal" data-target="#myModal">
+<button class="btn btn-primary btn-md col-xs-offset-1" data-toggle="modal" data-target="#myModal">
   Add a Comment
 </button>
 

@@ -26,7 +26,9 @@
         <li>
         	<%= link_to 'Home', root_path %>
         </li>
-        <li><a href="#">Members</a></li>
+        <% if user_signed_in? %>
+        	<li><%= link_to 'My Profile', user_path(current_user) %></li>
+        <% end %>
       	<li>
 				  <%= link_to new_post_path do %>
 				    <i class="glyphicon glyphicon-plus-sign"></i>

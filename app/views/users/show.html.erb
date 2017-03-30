@@ -1,0 +1,11 @@
+<br/>
+<br/>
+<h1 style="text-align: center">My Profile</h1>
+
+
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+	<h1>Name: <%= @user.first_name %> <%= @user.last_name %></h1>
+  <h2>Email address:<%= @user.email %></h2>
+  <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
+  <h4><%= @user.comments.count %> total comments</h4>
+</div>
