@@ -5,9 +5,9 @@
 
 <% @posts.each do |post| %>
 	<div class= "booyah-box col-xs-10 col-xs-offset-1">
-		<h3><%= post.title %></h3>
+		<h2><%= link_to post.title, post_path(post) %></h2><br/>
 		<% if post.user.present? %>
-			<i>-<%= post.user.email %></i>
+			<i><%= post.user.email %></i>
 		<% end %>
 	</div>
 <% end %>
