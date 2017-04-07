@@ -8,6 +8,8 @@
   Add a Comment
 </button>
 <h1><%= @post.title %></h1>
+  <i>Created: <%= @post.created_at.strftime("%m/%d/%Y at %I:%M%p") %></i>
+  <br/>
 	<% if @post.user.present? %>
 		<i>Author: <%= @post.user.first_name %> <%= @post.user.last_name %></i>
 	<% end %>
@@ -16,6 +18,8 @@
 	<hr/>
 	<% @post.comments.each do |comment| %>
 		<p><%= comment.body %></p>
+    <i>Created: <%= comment.created_at.strftime("%m/%d/%Y at %I:%M%p") %></i>
+    <br/>
 		<i>Author: <%= comment.user.first_name %> <%= comment.user.last_name %></i>
 		<hr/>
 	<% end %>
