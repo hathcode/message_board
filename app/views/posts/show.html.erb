@@ -14,8 +14,8 @@
 		<i>Author: <%= @post.user.first_name %> <%= @post.user.last_name %></i>
 	<% end %>
 	<br/><br/>
-	<p><%= @post.body %></p><br/>
-  <hr/>
+	<p><%= @post.body %></p>
+  <hr style="border-color:#888e99" />
 	<% @post.comments.each do |comment| %>
     <div class= "booyah-box col-xs-12" style="margin-top: 0px; margin-bottom: 0px; background-color: #eaeff7">
   		<p><%= comment.body %></p>
