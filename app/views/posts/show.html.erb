@@ -8,7 +8,7 @@
   Add a Comment
 </button>
 <h1><%= @post.title %></h1>
-  <i>Created: <%= @post.created_at.strftime("%m/%d/%Y at %I:%M%p") %></i>
+  <i>Started: <%= @post.created_at.strftime("%m/%d/%Y at %I:%M%p") %></i>
   <br/>
 	<% if @post.user.present? %>
 		<i>Author: <%= @post.user.first_name %> <%= @post.user.last_name %></i>
