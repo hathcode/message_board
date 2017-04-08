@@ -19,9 +19,8 @@
 	<% @post.comments.each do |comment| %>
     <div class= "booyah-box col-xs-12" style="margin-top: 0px; margin-bottom: 0px;">
   		<p><%= comment.body %></p>
-      <i>Created: <%= comment.created_at.strftime("%m/%d/%Y at %I:%M%p") %></i>
-      <br/>
-  		<i>Author: <%= comment.user.first_name %> <%= comment.user.last_name %></i>
+      <hr/>
+  		<i>Author: <%= comment.user.first_name %> <%= comment.user.last_name %> on <%= comment.created_at.strftime("%m/%d/%Y at %I:%M%p") %></i>
     </div>
 	<% end %>
 </div>
