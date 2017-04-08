@@ -15,13 +15,14 @@
 	<% end %>
 	<br/><br/>
 	<p><%= @post.body %></p><br/>
-	<hr/>
+  <hr/>
 	<% @post.comments.each do |comment| %>
-		<p><%= comment.body %></p>
-    <i>Created: <%= comment.created_at.strftime("%m/%d/%Y at %I:%M%p") %></i>
-    <br/>
-		<i>Author: <%= comment.user.first_name %> <%= comment.user.last_name %></i>
-		<hr/>
+    <div class= "booyah-box col-xs-12" style="margin-top: 0px; margin-bottom: 0px;">
+  		<p><%= comment.body %></p>
+      <i>Created: <%= comment.created_at.strftime("%m/%d/%Y at %I:%M%p") %></i>
+      <br/>
+  		<i>Author: <%= comment.user.first_name %> <%= comment.user.last_name %></i>
+    </div>
 	<% end %>
 </div>
 <div class="clear"></div>
