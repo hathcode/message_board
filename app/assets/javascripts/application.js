@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require local_time
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .

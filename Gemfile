@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#use local_time to display local time for users
+gem 'local_time'
+
 #use capybara for feature tests
 gem 'capybara'
 

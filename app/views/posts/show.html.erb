@@ -8,7 +8,7 @@
   Add a Comment
 </button>
 <h1><%= @post.title %></h1>
-  <i>Started: <%= @post.created_at.strftime("%m/%d/%Y at %I:%M%p") %></i>
+  <i>Started: <%= local_time(@post.created_at) %></i>
   <br/>
 	<% if @post.user.present? %>
 		<i>Author: <%= @post.user.first_name %> <%= @post.user.last_name %></i>
@@ -20,7 +20,7 @@
     <div class= "booyah-box col-xs-12" style="margin-top: 0px; margin-bottom: 0px; background-color: #eaeff7">
   		<p><%= comment.body %></p>
       <hr style="border-color:#888e99; margin-bottom: 2px;" />
-  		<i>Author: <%= comment.user.first_name %> <%= comment.user.last_name %> on <%= comment.created_at.strftime("%m/%d/%Y at %I:%M%p") %></i>
+  		<i>Author: <%= comment.user.first_name %> <%= comment.user.last_name %> on <%= local_time(comment.created_at) %></i>
     </div>
 	<% end %>
 </div>
